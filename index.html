@@ -31,8 +31,24 @@
             <li class="header__navbar-item header__navbar-item--separate">
               <a class="header__item-link" href="#" tile="Trở Thành Người Bán Shopee">Trở thành người bán Shopee </a>
             </li>
-            <li class="header__navbar-item header__navbar-item--separate">
+            <li class="header__navbar-item header__navbar-item--separate header__navbar-item--has-qr">
               <a class="header__item-link" href="#">Tải ứng dụng</a>
+
+              <div class="header__QR">
+                <img src="./assets/img/QRcode.png" alt="QR CODE" class="header__QR-img" />
+
+                <div class="header__QR-apps">
+                  <a href="#" class="header__qr-link"
+                    ><img src="./assets/img/appstore.png" alt="appstore" class="header__qr-download-img" />
+                  </a>
+                  <a href="#" class="header__qr-link">
+                    <img src="./assets/img/google play.png" alt="google play" class="header__qr-download-img"
+                  /></a>
+                  <a href="#" class="header__qr-link">
+                    <img src="./assets/img/app gallery.png" alt="app gallery" class="header__qr-download-img"
+                  /></a>
+                </div>
+              </div>
             </li>
             <li class="header__navbar-item">
               <span class="header__navbar-item--noPointer">Kết nối</span>
@@ -47,9 +63,23 @@
 
           <!-- ---- -->
           <ul class="header__navbar--list">
-            <li class="header__navbar-item">
+            <li class="header__navbar-item header__navbar-item--has-notify">
               <i class="header__navbar-icon fa-regular fa-bell"></i>
               Thông báo
+              <div class="header__notification">
+                <div class="header__notification-header">
+                  <div class="header__notification-header--img">
+                    <img src="./assets/img/notificationpng.png" alt="notification" class="notification-img" />
+                  </div>
+
+                  <p class="notification__descreption">Đăng nhập để xem thông báo</p>
+                </div>
+
+                <div class="header__notification-btn">
+                  <a href="#" class="notification-btn">Đăng ký</a>
+                  <a href="#" class="notification-btn">Đăng nhập</a>
+                </div>
+              </div>
             </li>
             <li class="header__navbar-item">
               <a class="header__item-link" href="#">
@@ -57,9 +87,14 @@
                 Hỗ Trợ
               </a>
             </li>
-            <li class="header__navbar-item">
+            <li class="header__navbar-item header__navbar-item--hover-show">
               <i class="header__navbar-icon fa-solid fa-globe"></i>
               Tiếng Việt
+              <div class="nav__language">
+                <a href="#" class="nav__language--VNE">Tiếng Việt</a>
+                <a href="#" class="nav__language--VNE">English</a>
+              </div>
+
               <i class="header__navbar-icon fa-solid fa-angle-down"></i>
             </li>
             <li class="header__navbar-item header__navbar-item--distance">
@@ -77,6 +112,73 @@
 
       <!-- Footer phần cuối trang web -->
       <div class="footer"></div>
+    </div>
+
+    <!-- modal layout -->
+    <div class="modal">
+      <div class="moda__overlay"></div>
+      <div class="moda__body">
+        <!-- authen form -->
+        <div class="auth-form">
+          <div class="auth-form__wrap">
+            <!-- auth-form header -->
+
+            <div class="auth-form__header">
+              <h3 class="auth-form__headding">Đăng Ký</h3>
+              <span class="auth-form__switch-btn">Đăng Nhập</span>
+            </div>
+
+            <!-- auth-form__form -->
+            <div class="auth-form__form">
+              <div class="auth-fomr__container">
+                <div class="auth-form__group">
+                  <input type="text" class="auth-form__input" placeholder="Nhập email của bạn" />
+                </div>
+
+                <!--  -->
+                <div class="auth-form__group">
+                  <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu của bạn" />
+                </div>
+                <!--  -->
+                <div class="auth-form__group">
+                  <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu" />
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="auth-form__aside">
+                <p class="auth-form__policy-text">
+                  Bằng việc đăng kí,bạn đã đồng ý với Hải Shopee về
+                  <a href="#" class="auth-form__text-link">Điều khoản dịch vụ</a>&<a
+                    href="#"
+                    class="auth-form__text-link"
+                    >Chính sách bảo mật</a
+                  >
+                </p>
+              </div>
+
+              <!--  -->
+              <div class="auth-form___controls">
+                <button class="btn auth-form___controls-back btn--normal">TRỞ LẠI</button>
+                <button class="btn btn--primary">ĐĂNG KÝ</button>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="auth-form__sosials">
+            <a href="" class="btn btn--size-s btn--width-icon auth-form__sosials--facebook">
+              <i class="fa-brands fa-square-facebook auth-form__sosials--icon"></i>
+              <span class="auth-form__sosials-title">Kết nối với Facebook</span>
+            </a>
+            <!--  -->
+            <a href="" class="btn btn--size-s btn--width-ico auth-form__sosials--google">
+              <i class="fa-brands fa-google auth-form__sosials--icon"></i>
+              <span class="auth-form__sosials-title">Kết nối với Google</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

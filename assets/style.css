@@ -28,6 +28,17 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.header__navbar-item--has-qr:hover .header__QR {
+  display: block;
+}
+
+.header__navbar-item--has-notify:hover .header__notification {
+  display: block;
+}
+.header__navbar-item--hover-show:hover .nav__language {
+  display: block;
+}
+
 .header__navbar-item--separate::after {
   content: "";
   display: block;
@@ -40,7 +51,7 @@
   transform: translateY(-50%);
 }
 
-.header__navbar-item--distance:after {
+.header__navbar-item--distance::after {
   content: "";
   display: block;
   position: absolute;
@@ -81,4 +92,265 @@
 .header__navbar-item--noPointer {
   cursor: text;
   color: var(--white-color);
+}
+/* header QR code */
+
+.header__QR {
+  width: 184px;
+  background-color: var(--white-color);
+  position: absolute;
+  top: calc(100% + 15px);
+  border-radius: 2px;
+  left: -3px;
+  display: none;
+  animation: fadeIn ease-in 0.3s;
+  cursor: default;
+}
+
+.header__QR::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 30px;
+  width: 106%;
+  top: -7%;
+  left: -7px;
+}
+
+.header__QR-img {
+  width: 100%;
+  padding: 4px;
+}
+
+.header__QR-apps {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px 4px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__qr-download-img {
+  width: 70px;
+  padding-bottom: 4px;
+}
+
+/* header notification */
+.header__notification {
+  width: 401px;
+  background-color: var(--white-color);
+  position: absolute;
+  top: calc(100% + 15px);
+  right: 0;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  animation: headerNotiGrowth ease-in 0.2s;
+  transform-origin: 85% top;
+  -webkit-animation: headerNotiGrowth ease-in 0.2s;
+  -moz-animation: headerNotiGrowth ease-in 0.2s;
+  -o-animation: headerNotiGrowth ease-in 0.2s;
+  will-change: opacity, transform;
+  display: none;
+}
+.header__notification::before {
+  position: absolute;
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 20px 24px;
+  border-color: transparent transparent var(--white-color) transparent;
+  right: 15px;
+  top: -9%;
+}
+.header__notification::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 21%;
+  height: 30px;
+  right: -2px;
+  top: -23px;
+}
+@keyframes headerNotiGrowth {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.header__notification-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 82px 0;
+  cursor: default;
+}
+.header__notification-header--img {
+  width: 100px;
+  height: 100px;
+}
+.notification-img {
+  width: 100%;
+  height: 100%;
+}
+.notification__descreption {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: text;
+}
+
+.header__notification-btn {
+  display: flex;
+  align-items: center;
+  background-color: #e7e5e5;
+}
+.notification-btn {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--text-color);
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 400;
+}
+.notification-btn:hover {
+  background-color: #cbe1e2;
+  color: #fe6233;
+}
+
+/* nav language */
+.nav__language {
+  width: 200px;
+  position: absolute;
+  background-color: var(--white-color);
+  top: calc(100% + 11px);
+  right: 0;
+  border-radius: 3px;
+  border: 1px solid #c4b8b8;
+  animation: headerNotiGrowth 0.2s ease-in;
+  transform-origin: 80% top;
+  display: none;
+}
+.nav__language--VNE {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  font-size: 1.5rem;
+  padding: 12px 13px;
+}
+.nav__language--VNE:hover {
+  color: #fe6233;
+}
+.nav__language::after {
+  position: absolute;
+  top: -19px;
+  right: -1px;
+  content: "";
+  display: block;
+  width: 48%;
+  height: 30px;
+}
+.nav__language::before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  right: 34px;
+  display: block;
+  border-width: 20px 26px;
+  border-style: solid;
+  border-color: transparent transparent var(--white-color) transparent;
+}
+
+/* auth-form */
+.auth-form {
+  width: 500px;
+  background-color: var(--white-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.auth-form__wrap {
+  padding: 0 32px;
+}
+.auth-form__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.auth-form__headding {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.auth-form__switch-btn {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-weight: 400;
+  cursor: pointer;
+}
+.auth-form__form {
+}
+.auth-form__input {
+  width: 100%;
+  height: 40px;
+  margin-top: 16px;
+  padding: 0 12px;
+  font-size: 1.4rem;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  outline: none;
+}
+.auth-form__input:focus {
+  border-color: #8888;
+}
+.auth-form__aside {
+  margin-top: 18px;
+}
+.auth-form__policy-text {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: center;
+  padding: 0 12px;
+}
+.auth-form__text-link {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.auth-form___controls {
+  margin-top: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.auth-form___controls-back {
+  margin-right: 8px;
+}
+
+.auth-form__sosials {
+  background-color: #f5f5f5;
+  padding: 12px 36px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+.auth-form__sosials--icon {
+  font-size: 1.8rem;
+}
+.auth-form__sosials--facebook {
+  background-color: #3a5a98;
+  color: var(--white-color);
+  margin-right: 32px;
+}
+.auth-form__sosials--facebook .auth-form__sosials--icon {
+  color: var(--white-color);
+}
+
+.auth-form__sosials-title {
+  margin: 0 24px;
+}
+.auth-form__sosials--google {
+  background-color: var(--white-color);
 }
