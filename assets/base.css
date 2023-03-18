@@ -4,6 +4,9 @@
   --text-color: #333;
   --primary-color: #ee4d2d;
   --border-color: #dbdbdbdb;
+  --header-height: 120px;
+  --navbar-height: 34px;
+  --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 * {
@@ -41,7 +44,15 @@ html {
     opacity: 1;
   }
 }
-
+/*  */
+@keyframes growth {
+  from {
+    transform: scale(var(--growth-form));
+  }
+  to {
+    transform: scale(var(--growth-to));
+  }
+}
 /* modal */
 .modal {
   position: fixed;
@@ -50,6 +61,7 @@ html {
   bottom: 0;
   left: 0;
   display: flex;
+  animation: fadeIn linear 0.2s;
 }
 
 .moda__overlay {
@@ -81,6 +93,7 @@ html {
   cursor: pointer;
   color: var(--text-color);
   padding: 0 12px;
+  line-height: 1.6rem;
 }
 
 .btn.btn--size-s {
