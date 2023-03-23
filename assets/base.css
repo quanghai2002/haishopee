@@ -20,6 +20,7 @@ html {
   box-sizing: border-box;
 }
 
+/* responsive */
 .gird {
   width: 1200px;
   max-width: 100%;
