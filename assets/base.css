@@ -4,9 +4,11 @@
   --text-color: #333;
   --primary-color: #ee4d2d;
   --border-color: #dbdbdbdb;
+
   --header-height: 120px;
   --navbar-height: 34px;
   --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+  --header-sort-bar-height: 46px;
 }
 
 * {
@@ -21,15 +23,6 @@ html {
 }
 
 /* responsive */
-.gird {
-  width: 1200px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.gird__full--width {
-  width: 100%;
-}
 
 .grid__row {
   display: flex;
